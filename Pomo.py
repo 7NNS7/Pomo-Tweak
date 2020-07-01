@@ -21,7 +21,14 @@ if n == 'start':
 n = input()
 stop = d.now().time()
 
-print(start.hour - stop.hour)
-print(start.minute - stop.minute)
-print(start.second - stop.second)
+hours = start.hour - stop.hour
+minutes = start.minute - stop.minute
+duration = str(hours)+' hrs '+str(minute)+" minutes "
+print("Enter category:")
+category = input()
+print('Enter the activity:')
+activity = input()
 
+with open('Progress.csv',"a") as file:
+    record = start+','+stop+','+duration+','+category+','+activity+'\n'
+    file.write(record)
