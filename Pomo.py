@@ -13,6 +13,15 @@ Algorithm
 
 from datetime import datetime as d
 
+try:
+    file = open('Progress.csv','r')
+    file.close()
+except:
+    file = open('Progress.csv','w')
+    header = 'Start, Stop, Duration, Category, Activity\n'
+    file.write(header)
+    file.close()
+
 #startprint(d.now())
 print("Enter 'start' when you are ready!!")
 n = input()
@@ -30,7 +39,8 @@ print("Enter category:")
 category = input()
 print('Enter the activity:')
 activity = input()
-
+#Saving it in the format.
+#Start, Stop, Duration, Category, Activity
 with open('Progress.csv',"a") as file:
     record = str(start)+','+str(stop)+','+duration+','+category+','+activity+'\n'
     file.write(record)
