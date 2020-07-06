@@ -22,7 +22,7 @@ except:
     file.write(header)
     file.close()
 
-#startprint(d.now())
+
 print("Enter 'start' when you are ready!!")
 n = input()
 if n == 'start':
@@ -34,7 +34,7 @@ stop = d.now()
 hours = stop.hour - start.hour
 minutes = stop.minute - start.minute
 duration = str(stop - start)
-#duration = str(hours)+' hrs '+str(minutes)+' minutes '
+
 print("Enter category:")
 category = input()
 print('Enter the activity:')
@@ -44,3 +44,4 @@ activity = input()
 with open('Progress.csv',"a") as file:
     record = str(start)+','+str(stop)+','+duration+','+category+','+activity+'\n'
     file.write(record)
+
