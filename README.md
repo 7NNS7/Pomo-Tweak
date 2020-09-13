@@ -12,6 +12,3 @@ and just follow the text on the terminal.
 <br><br>
 The csv file can be used for EDA and gain actionable insights.
 
-# Upcoming
-# Adding GUI using Tkinter library.
-
